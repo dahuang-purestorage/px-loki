@@ -49,9 +49,13 @@ spec:
           state:
             description: State defines the state for this issue
             type: string
+          type:
+            description: Type defines the type for this issue
+            type: string
         required:
         - reason
         - state
+        - type
         type: object
     served: true
     storage: true

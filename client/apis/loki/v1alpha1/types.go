@@ -22,6 +22,9 @@ type PXIssue struct {
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
+	// Type defines the type for this issue
+	Type string `json:"type" protobuf:"bytes,2,opt,name=type"`
+
 	// State defines the state for this issue
 	State string `json:"state" protobuf:"bytes,2,opt,name=state"`
 
