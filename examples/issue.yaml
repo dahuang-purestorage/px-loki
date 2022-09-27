@@ -2,5 +2,6 @@ apiVersion: autopilot.libopenstorage.org/v1alpha1
 kind: PXIssue
 metadata:
   name: pvc-91c8s8-pending-create
+state: pending create
 reason: "CSI PVC in pending state but CSI is disabled"
 resolution: "Enable CSI in your StorageCluster"

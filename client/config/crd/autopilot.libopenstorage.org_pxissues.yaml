@@ -46,6 +46,12 @@ spec:
           resolution:
             description: Resolution defines the resolution for this issue
             type: string
+          state:
+            description: State defines the state for this issue
+            type: string
+        required:
+        - reason
+        - state
         type: object
     served: true
     storage: true

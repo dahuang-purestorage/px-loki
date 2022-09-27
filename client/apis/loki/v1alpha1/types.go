@@ -22,8 +22,10 @@ type PXIssue struct {
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
+	// State defines the state for this issue
+	State string `json:"state" protobuf:"bytes,2,opt,name=state"`
+
 	// Reason defines the reason for this issue
-	// +optional
 	Reason string `json:"reason" protobuf:"bytes,2,opt,name=reason"`
 
 	// Resolution defines the resolution for this issue
