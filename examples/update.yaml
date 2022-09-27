@@ -1,0 +1,6 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: PXIssue
+metadata:
+  name: px-cluster-version-update
+reason: "Portworx version 2.11.0 is out of date"
+resolution: "Update your StorageCluster image version to be 2.11.3"

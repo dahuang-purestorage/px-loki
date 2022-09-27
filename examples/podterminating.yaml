@@ -1,0 +1,6 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: PXIssue
+metadata:
+  name: pod-a18c882-terminating
+reason: "Pod a18c882 is stuck in terminating state"
+resolution: "Use the command pxc volume timeline <vol-id> to check for potential issues"
