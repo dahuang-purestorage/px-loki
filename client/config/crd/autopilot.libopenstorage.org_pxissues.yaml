@@ -1,0 +1,58 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.5.0
+  creationTimestamp: null
+  name: pxissues.autopilot.libopenstorage.org
+spec:
+  group: autopilot.libopenstorage.org
+  names:
+    kind: PXIssue
+    listKind: PXIssueList
+    plural: pxissues
+    shortNames:
+    - pxi
+    singular: pxissue
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - description: The reason for this issue
+      jsonPath: .reason
+      name: Reason
+      type: string
+    - description: The resolution for this issue
+      jsonPath: .resolution
+      name: Resolution
+      type: string
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: PXIssue is a resentation of a PX issue
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          reason:
+            description: Reason defines the reason for this issue
+            type: string
+          resolution:
+            description: Resolution defines the resolution for this issue
+            type: string
+        type: object
+    served: true
+    storage: true
+    subresources: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
