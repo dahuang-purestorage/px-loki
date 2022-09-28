@@ -31,6 +31,9 @@ type PXIssue struct {
 	// Reason defines the reason for this issue
 	Reason string `json:"reason" protobuf:"bytes,2,opt,name=reason"`
 
+	// Docs defines the docs for this issue
+	Docs string `json:"docs" protobuf:"bytes,2,opt,name=docs"`
+
 	// Resolution defines the resolution for this issue
 	// +optional
 	Resolution string `json:"resolution" protobuf:"bytes,3,opt,name=resolution"`
