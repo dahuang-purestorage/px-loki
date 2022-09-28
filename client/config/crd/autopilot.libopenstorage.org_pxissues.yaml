@@ -43,6 +43,9 @@ spec:
             type: string
           metadata:
             type: object
+          namespace:
+            description: Namespace defines the namespace for this issue
+            type: string
           reason:
             description: Reason defines the reason for this issue
             type: string
@@ -57,6 +60,7 @@ spec:
             type: string
         required:
         - docs
+        - namespace
         - reason
         - state
         - type

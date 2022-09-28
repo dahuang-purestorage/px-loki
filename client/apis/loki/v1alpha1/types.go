@@ -22,6 +22,9 @@ type PXIssue struct {
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
+	// Namespace defines the namespace for this issue
+	Namespace string `json:"namespace" protobuf:"bytes,2,opt,name=namespace"`
+
 	// Type defines the type for this issue
 	Type string `json:"type" protobuf:"bytes,2,opt,name=type"`
 
